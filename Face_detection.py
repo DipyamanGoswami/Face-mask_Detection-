@@ -2,9 +2,12 @@ from keras.models import load_model
 import cv2
 import time
 import mediapipe as mp
+import logging
 
-cap = cv2.VideoCapture(0)
+logging.basicConfig(filename='face_mask_detection.log', level=logging.INFO,
+                    format='%(asctime)s [%(levelname)s]: %(message)s', datefmt='%Y-%m-%d %H:%M:%S')
 
+logging.info("Loading the face mask detection model")
 model = load_model('Face_mask_model.h5')
 
 mpFaceDetect = mp.solutions.face_detection
@@ -34,6 +37,7 @@ def generate_frames():
     while True:
         success, frame = cap.read()  # read the camera frame
         if not success:
+            logging.error("Failed to capture frame from camera.")
             break
         else:
             results = facedetection.process(frame)
@@ -50,7 +54,7 @@ def generate_frames():
                     bbox = int(bboxC.xmin * iw), int(bboxC.ymin * ih), int(bboxC.width * iw), int(bboxC.height * ih)
                     cv2.rectangle(frame, bbox, (255, 0, 255), 2)
                     img = frame[int(bboxC.ymin * ih): int(bboxC.ymin * ih) + int(bboxC.height * ih),
-                     int(bboxC.xmin * iw): int(bboxC.xmin * iw) + int(bboxC.width * iw), :]
+                          int(bboxC.xmin * iw): int(bboxC.xmin * iw) + int(bboxC.width * iw), :]
 
             img = cv2.resize(img, (100, 100))
 
@@ -72,3 +76,15 @@ def generate_frames():
             yield (b'--frame\r\n'
                    b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n')
     cap.release()
+
+
+if __name__ == "__main__":
+    # Start the video capture
+    logging.info("Starting video capture")
+    cap = cv2.VideoCapture(0)
+
+    # Generate frames and perform mask detection
+    logging.info("Face mask detection started")
+    for frame in generate_frames():
+        # Do nothing here, as the frames are being generated and processed in the generate_frames() function.
+        pass

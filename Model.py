@@ -4,6 +4,9 @@ import numpy as np
 import matplotlib.pyplot as plt
 from keras.layers import Dense, Flatten, Dropout
 from keras.models import Sequential
+import logging
+
+logging.basicConfig(filename='face_mask_detection.log', level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 DIR1 = r'train'
 #DIR2 = r'dataset\valid'
@@ -11,6 +14,7 @@ CATEGORY = ['with_mask', 'without_mask']
 
 
 def generate(directories, cat, size):
+    logging.info(f"Generating data from {directories} with categories: {cat} and size: {size}")
     data_gen = []
     for category in cat:
         folder = os.path.join(directories, category)
@@ -84,6 +88,8 @@ model.add(Dense(1, activation='sigmoid'))
 # model.summary()
 
 model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
+
+logging.info("Training the model")
 history = model.fit(X_data_train, y_data_train, epochs=10, validation_split=0.2)
 
 # plotting of the losses
@@ -120,13 +126,18 @@ img_arr = img_arr / 255
 
 img_arr = img_arr.reshape((1,) + img_arr.shape)
 
-print(model.predict(img_arr))
+logging.info("Making predictions using the model")
+prediction = model.predict(img_arr)
 
-if model.predict(img_arr) >= 0.5:
+if prediction >= 0.5:
+    logging.info('Prediction: person with mask')
     print('person with mask')
 else:
+    logging.info('Prediction: person without mask')
     print('person without mask')
 
 cv2.waitKey(0)
 cv2.destroyAllWindows()
+
+logging.info("Saving the model")
 model.save('Face_mask_model.h5')
