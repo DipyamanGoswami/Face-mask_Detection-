@@ -115,3 +115,42 @@
 2023-08-03 13:26:05 [INFO]: 127.0.0.1 - - [03/Aug/2023 13:26:05] "GET /result HTTP/1.1" 200 -
 2023-08-03 13:26:05 [INFO]: 127.0.0.1 - - [03/Aug/2023 13:26:05] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
 2023-08-03 13:26:08 [INFO]: 127.0.0.1 - - [03/Aug/2023 13:26:08] "GET /video_feed HTTP/1.1" 200 -
+2023-08-05 19:17:54 [INFO]: Loading the face mask detection model
+2023-08-05 19:17:55 [INFO]: Starting video capture
+2023-08-05 19:17:58 [INFO]: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-08-05 19:17:58 [INFO]: [33mPress CTRL+C to quit[0m
+2023-08-05 19:17:58 [INFO]:  * Restarting with stat
+2023-08-05 19:18:02 [INFO]: Loading the face mask detection model
+2023-08-05 19:18:02 [INFO]: Starting video capture
+2023-08-05 19:18:05 [WARNING]:  * Debugger is active!
+2023-08-05 19:18:05 [INFO]:  * Debugger PIN: 974-582-020
+2023-08-05 19:18:09 [INFO]: 127.0.0.1 - - [05/Aug/2023 19:18:09] "GET / HTTP/1.1" 200 -
+2023-08-05 19:18:09 [INFO]: 127.0.0.1 - - [05/Aug/2023 19:18:09] "GET /static/style.css HTTP/1.1" 200 -
+2023-08-05 19:18:09 [INFO]: 127.0.0.1 - - [05/Aug/2023 19:18:09] "[33mGET /static/4.jpeg HTTP/1.1[0m" 404 -
+2023-08-05 19:18:09 [INFO]: 127.0.0.1 - - [05/Aug/2023 19:18:09] "GET /static/icon.jpg HTTP/1.1" 200 -
+2023-08-05 19:18:09 [INFO]: 127.0.0.1 - - [05/Aug/2023 19:18:09] "GET /static/mask.png HTTP/1.1" 200 -
+2023-08-05 19:18:09 [INFO]: 127.0.0.1 - - [05/Aug/2023 19:18:09] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2023-08-05 19:18:28 [INFO]: 127.0.0.1 - - [05/Aug/2023 19:18:28] "GET /result HTTP/1.1" 200 -
+2023-08-05 19:18:28 [INFO]: 127.0.0.1 - - [05/Aug/2023 19:18:28] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2023-08-05 19:18:28 [INFO]: 127.0.0.1 - - [05/Aug/2023 19:18:28] "[33mGET /static/2.jpeg HTTP/1.1[0m" 404 -
+2023-08-05 19:18:31 [INFO]: 127.0.0.1 - - [05/Aug/2023 19:18:31] "GET /video_feed HTTP/1.1" 200 -
+2023-08-05 19:22:50 [INFO]: Loading the face mask detection model
+2023-08-05 19:22:51 [INFO]: Starting video capture
+2023-08-05 19:22:54 [INFO]: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-08-05 19:22:54 [INFO]: [33mPress CTRL+C to quit[0m
+2023-08-05 19:22:54 [INFO]:  * Restarting with stat
+2023-08-05 19:22:57 [INFO]: Loading the face mask detection model
+2023-08-05 19:22:58 [INFO]: Starting video capture
+2023-08-05 19:23:01 [WARNING]:  * Debugger is active!
+2023-08-05 19:23:01 [INFO]:  * Debugger PIN: 974-582-020
+2023-08-05 19:23:01 [INFO]: 127.0.0.1 - - [05/Aug/2023 19:23:01] "GET / HTTP/1.1" 200 -
+2023-08-05 19:23:01 [INFO]: 127.0.0.1 - - [05/Aug/2023 19:23:01] "GET /static/style.css HTTP/1.1" 200 -
+2023-08-05 19:23:01 [INFO]: 127.0.0.1 - - [05/Aug/2023 19:23:01] "GET /static/4.jpg HTTP/1.1" 200 -
+2023-08-05 19:23:01 [INFO]: 127.0.0.1 - - [05/Aug/2023 19:23:01] "[36mGET /static/icon.jpg HTTP/1.1[0m" 304 -
+2023-08-05 19:23:01 [INFO]: 127.0.0.1 - - [05/Aug/2023 19:23:01] "[36mGET /static/mask.png HTTP/1.1[0m" 304 -
+2023-08-05 19:23:07 [INFO]: 127.0.0.1 - - [05/Aug/2023 19:23:07] "GET /result HTTP/1.1" 200 -
+2023-08-05 19:23:07 [INFO]: 127.0.0.1 - - [05/Aug/2023 19:23:07] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2023-08-05 19:23:07 [INFO]: 127.0.0.1 - - [05/Aug/2023 19:23:07] "GET /static/2.jpg HTTP/1.1" 200 -
+2023-08-05 19:23:10 [INFO]: 127.0.0.1 - - [05/Aug/2023 19:23:10] "GET /video_feed HTTP/1.1" 200 -
