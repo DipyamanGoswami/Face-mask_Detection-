@@ -10,6 +10,9 @@ logging.basicConfig(filename='face_mask_detection.log', level=logging.INFO,
 logging.info("Loading the face mask detection model")
 model = load_model('Face_mask_model.h5')
 
+logging.info("Starting video capture")
+cap = cv2.VideoCapture(0)
+
 mpFaceDetect = mp.solutions.face_detection
 Draw = mp.solutions.drawing_utils
 facedetection = mpFaceDetect.FaceDetection()
